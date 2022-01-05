@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import reducer from "./reducer";
 
-//Complete 6.1 - 6.2
+//Complete 6.1 - 6.2, add to git
 const store = createStore(reducer);
 
 const App = () => {
