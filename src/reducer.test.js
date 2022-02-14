@@ -9,7 +9,6 @@ describe("unicafe reducer", () => {
   };
 
   test("should return a proper initial state when called with undefined state", () => {
-    const state = {};
     const action = {
       type: "DO_NOTHING",
     };
@@ -24,6 +23,9 @@ describe("unicafe reducer", () => {
     };
     const state = initialState;
 
+    //The deepFreeze(state) command ensures that the
+    //reducer does not change the state of the store
+    //given to it as a parameter.
     deepFreeze(state);
     const newState = counterReducer(state, action);
     expect(newState).toEqual({
